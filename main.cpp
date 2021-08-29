@@ -1,9 +1,12 @@
 #include <SFML/Graphics.hpp>
-#include "Game.hpp"
+#include "Game.h"
+#include "Constants.h"
 
 int main() {
-    
-    Game game;
+    sf::RenderWindow window(sf::VideoMode(Constants::WINDOW_WIDTH, Constants::WINDOW_HEIGHT), "Rainbow Game");
+    window.setFramerateLimit(Constants::FRAME_RATE);
+    Game *game = new Game(&window);
+    game->run();
 
     return 0;
 }

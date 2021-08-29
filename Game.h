@@ -2,14 +2,15 @@
 
 class Game {
     public:
-        Game();
+        Game(sf::RenderWindow *mWindow);
         void run();
     private:
         void process_events();
         void update();
         void render();
     private:
-        sf::RenderWindow window;
-        //Player player
+                
+    sf::RenderWindow *window;
+    //Player player
 
 };
