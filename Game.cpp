@@ -1,8 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include "Game.hpp"
+#include <iostream>
 
 Game::Game(sf::RenderWindow *mWindow) { 
-
+    State_maneger *manegerAux = new State_maneger();
+    this->maneger = manegerAux;
     this->window = mWindow;
     
 }
@@ -10,8 +12,7 @@ Game::Game(sf::RenderWindow *mWindow) {
 void Game::run() {
     while(this->window->isOpen()) {
 
-
-
+        
 
 
 
