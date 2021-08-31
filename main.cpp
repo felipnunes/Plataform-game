@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
-#include "Game.h"
-#include "Constants.h"
+#include "Game.hpp"
+#include "Constants.hpp"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(Constants::WINDOW_WIDTH, Constants::WINDOW_HEIGHT), "Rainbow Game");
@@ -10,3 +10,5 @@ int main() {
 
     return 0;
 }
+
+//g++ -c main.cpp Game.cpp State_maneger.cpp Splash_screen.cpp && g++ main.o Game.o State_maneger.o Splash_screen.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio && ./sfml-app

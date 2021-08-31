@@ -1,4 +1,6 @@
 #pragma once
+#include "State_maneger.hpp"
+#include <stdlib.h>
 
 class Game {
     public:
@@ -9,8 +11,8 @@ class Game {
         void update();
         void render();
     private:
-                
-    sf::RenderWindow *window;
+        State_maneger maneger();
+        sf::RenderWindow *window;
     //Player player
 
 };

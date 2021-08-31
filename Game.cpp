@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "Game.h"
+#include "Game.hpp"
 
 Game::Game(sf::RenderWindow *mWindow) { 
 
@@ -9,6 +9,12 @@ Game::Game(sf::RenderWindow *mWindow) {
 
 void Game::run() {
     while(this->window->isOpen()) {
+
+
+
+
+
+
         this->process_events();
         this->update();
         this->render();
@@ -32,7 +38,6 @@ void Game::update() {
 }
 
 void Game::render() {
-
     this->window->clear();
     //draw function here
     this->window->display();
