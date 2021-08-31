@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 class Constants {
     public:
         const static unsigned int WINDOW_WIDTH = 1920;

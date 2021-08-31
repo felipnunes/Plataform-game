@@ -3,10 +3,8 @@
 #include <iostream>
 
 Game::Game(sf::RenderWindow *mWindow) { 
-    State_maneger *manegerAux = new State_maneger();
-    this->maneger = manegerAux;
+    this->set_state_maneger();
     this->window = mWindow;
-    
 }
 
 void Game::run() {
@@ -36,10 +34,24 @@ void Game::process_events() {
 
 void Game::update() {
 
+
 }
 
 void Game::render() {
     this->window->clear();
     //draw function here
+    this->get_state_maneger().render(window);
     this->window->display();
+}
+
+void Game::set_state_maneger() {
+    State_maneger *manegerAux = new State_maneger();
+    this->maneger.push(*manegerAux);
+    delete manegerAux;
+
+    
+}
+
+State_maneger Game::get_state_maneger() {
+    return this->maneger.top();
 }
